@@ -28,7 +28,7 @@ const Navbar = () => {
     >
       <div className="container flex items-center justify-between">
         <a href="#" className="font-heading text-2xl font-semibold tracking-tight text-foreground">
-          Parana<span className="text-primary">flow</span>
+          Parana<span className="text-primary">flow</span> Yoga
         </a>
 
         {/* Desktop nav */}
