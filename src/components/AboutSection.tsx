@@ -1,5 +1,6 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { Award, Globe, Clock } from "lucide-react";
+import krishanImg from "@/assets/krishan-yoga.jpeg";
 
 const stats = [
   { icon: Clock, value: "17+", label: "Years Practice" },
@@ -14,15 +15,20 @@ const AboutSection = () => {
     <section id="about" className="py-24 lg:py-32 bg-background" ref={ref}>
       <div className="container">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Visual element instead of photo */}
+          {/* Photo with experience badge */}
           <div className={`${isVisible ? "animate-slide-left" : "opacity-0"}`}>
-            <div className="relative bg-sage-light rounded-2xl aspect-[4/5] flex items-center justify-center">
-              <div className="text-center p-8">
-                <p className="font-heading text-6xl font-bold text-primary mb-4">🧘</p>
-                <p className="font-heading text-2xl font-semibold text-foreground">Krishan Goyat</p>
-                <p className="text-muted-foreground mt-2">Yoga Instructor & Healer</p>
+            <div className="relative">
+              <img
+                src={krishanImg}
+                alt="Krishan Goyat performing a yoga handstand"
+                className="w-full rounded-2xl object-cover aspect-[4/5] shadow-lg"
+                loading="lazy"
+              />
+              {/* 17+ Experience badge */}
+              <div className="absolute -bottom-6 -right-6 bg-primary text-primary-foreground rounded-2xl p-6 shadow-xl">
+                <p className="font-heading text-4xl font-bold leading-none">17+</p>
+                <p className="text-sm font-medium mt-1 opacity-90">Years Experience</p>
               </div>
-              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-primary/10 rounded-2xl -z-10" />
             </div>
           </div>
 
