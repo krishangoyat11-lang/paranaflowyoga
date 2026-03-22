@@ -11,7 +11,7 @@ const AboutSection = () => {
   const { ref, isVisible } = useScrollReveal();
 
   return (
-    <section id="about" className="py-24 lg:py-32" ref={ref}>
+    <section id="about" className="py-24 lg:py-32 bg-background" ref={ref}>
       <div className="container">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Visual element instead of photo */}

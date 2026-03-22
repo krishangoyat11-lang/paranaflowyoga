@@ -13,7 +13,7 @@ const WhyChooseSection = () => {
   const { ref, isVisible } = useScrollReveal();
 
   return (
-    <section id="why-us" className="py-24 lg:py-32" ref={ref}>
+    <section id="why-us" className="py-24 lg:py-32 bg-card" ref={ref}>
       <div className="container">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Text */}
