@@ -20,10 +20,10 @@ const ContactSection = () => {
         </div>
 
         <div className={`max-w-2xl mx-auto ${isVisible ? "animate-fade-up delay-200" : "opacity-0"}`}>
-          <div className="grid sm:grid-cols-3 gap-8">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
             <a
               href="tel:+918950622342"
-              className="group flex flex-col items-center text-center bg-background rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow duration-300"
+              className="group flex flex-col items-center text-center bg-background rounded-2xl p-6 shadow-sm hover:shadow-lg transition-shadow duration-300"
             >
               <div className="w-14 h-14 rounded-full bg-sage-light flex items-center justify-center mb-4 group-hover:bg-primary transition-colors duration-300">
                 <Phone className="w-6 h-6 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
@@ -32,7 +32,18 @@ const ContactSection = () => {
               <p className="text-sm text-muted-foreground">+91 8950622342</p>
             </a>
 
-            <div className="flex flex-col items-center text-center bg-background rounded-2xl p-8 shadow-sm">
+            <a
+              href="mailto:paranayogaflow@gmail.com"
+              className="group flex flex-col items-center text-center bg-background rounded-2xl p-6 shadow-sm hover:shadow-lg transition-shadow duration-300"
+            >
+              <div className="w-14 h-14 rounded-full bg-sage-light flex items-center justify-center mb-4 group-hover:bg-primary transition-colors duration-300">
+                <Mail className="w-6 h-6 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
+              </div>
+              <p className="font-medium text-foreground mb-1">Email</p>
+              <p className="text-sm text-muted-foreground break-all">paranayogaflow@gmail.com</p>
+            </a>
+
+            <div className="flex flex-col items-center text-center bg-background rounded-2xl p-6 shadow-sm">
               <div className="w-14 h-14 rounded-full bg-sage-light flex items-center justify-center mb-4">
                 <MapPin className="w-6 h-6 text-primary" />
               </div>
@@ -44,7 +55,7 @@ const ContactSection = () => {
               href="https://instagram.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex flex-col items-center text-center bg-background rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow duration-300"
+              className="group flex flex-col items-center text-center bg-background rounded-2xl p-6 shadow-sm hover:shadow-lg transition-shadow duration-300"
             >
               <div className="w-14 h-14 rounded-full bg-sage-light flex items-center justify-center mb-4 group-hover:bg-primary transition-colors duration-300">
                 <Instagram className="w-6 h-6 text-primary group-hover:text-primary-foreground transition-colors duration-300" />

@@ -1,5 +1,4 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
-import aboutImage from "@/assets/about-yoga.jpg";
 import { Award, Globe, Clock } from "lucide-react";
 
 const stats = [
@@ -15,16 +14,15 @@ const AboutSection = () => {
     <section id="about" className="py-24 lg:py-32" ref={ref}>
       <div className="container">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Image */}
+          {/* Visual element instead of photo */}
           <div className={`${isVisible ? "animate-slide-left" : "opacity-0"}`}>
-            <div className="relative">
-              <img
-                src={aboutImage}
-                alt="Krishan Goyat in meditation"
-                className="w-full rounded-2xl shadow-xl object-cover aspect-[4/5]"
-                loading="lazy"
-              />
-              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-sage-light rounded-2xl -z-10" />
+            <div className="relative bg-sage-light rounded-2xl aspect-[4/5] flex items-center justify-center">
+              <div className="text-center p-8">
+                <p className="font-heading text-6xl font-bold text-primary mb-4">🧘</p>
+                <p className="font-heading text-2xl font-semibold text-foreground">Krishan Goyat</p>
+                <p className="text-muted-foreground mt-2">Yoga Instructor & Healer</p>
+              </div>
+              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-primary/10 rounded-2xl -z-10" />
             </div>
           </div>
 
