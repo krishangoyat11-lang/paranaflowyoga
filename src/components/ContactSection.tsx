@@ -1,5 +1,5 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
-import { Phone, MapPin, Instagram } from "lucide-react";
+import { Phone, MapPin, Instagram, Mail } from "lucide-react";
 
 const ContactSection = () => {
   const { ref, isVisible } = useScrollReveal();
