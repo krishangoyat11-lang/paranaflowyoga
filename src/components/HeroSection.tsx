@@ -1,22 +1,31 @@
+import heroBg from "@/assets/hero-bg.jpg";
+
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Background gradient instead of photo */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-sage-light to-background" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,hsl(var(--primary)/0.15),transparent_70%)]" />
+      {/* Background image */}
+      <div className="absolute inset-0">
+        <img
+          src={heroBg}
+          alt="Yoga meditation at sunrise in the mountains"
+          className="w-full h-full object-cover"
+          loading="eager"
+        />
+        <div className="absolute inset-0 bg-foreground/40" />
+      </div>
 
       {/* Content */}
       <div className="container relative z-10 pt-24 pb-16">
         <div className="max-w-2xl">
-          <p className="animate-fade-up text-sm font-medium tracking-[0.2em] uppercase text-primary mb-6">
+          <p className="animate-fade-up text-sm font-medium tracking-[0.2em] uppercase text-sage-light mb-6">
             By Krishan Goyat
           </p>
-          <h1 className="animate-fade-up delay-100 font-heading text-5xl sm:text-6xl lg:text-7xl font-semibold leading-[1.05] text-foreground mb-6 text-balance">
+          <h1 className="animate-fade-up delay-100 font-heading text-5xl sm:text-6xl lg:text-7xl font-semibold leading-[1.05] text-cream mb-6 text-balance">
             Flow with Breath,
             <br />
             Live with Balance
           </h1>
-          <p className="animate-fade-up delay-200 text-lg sm:text-xl text-muted-foreground max-w-lg mb-10 text-pretty leading-relaxed">
+          <p className="animate-fade-up delay-200 text-lg sm:text-xl text-cream/85 max-w-lg mb-10 text-pretty leading-relaxed">
             Transform your body, calm your mind, and elevate your life with personalized yoga at your doorstep in Gurgaon & NCR.
           </p>
           <div className="animate-fade-up delay-300 flex flex-wrap gap-4">
@@ -28,7 +37,7 @@ const HeroSection = () => {
             </a>
             <a
               href="#about"
-              className="inline-flex items-center border-2 border-primary/30 text-foreground px-8 py-4 rounded-lg text-base font-medium hover:bg-primary/5 transition-colors active:scale-[0.97]"
+              className="inline-flex items-center border-2 border-cream/40 text-cream px-8 py-4 rounded-lg text-base font-medium hover:bg-cream/10 transition-colors active:scale-[0.97]"
             >
               Learn More
             </a>
