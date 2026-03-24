@@ -57,7 +57,7 @@ const ContactSection = () => {
             </div>
 
             <a
-              href="https://instagram.com"
+              href="https://instagram.com/Paranaflowyoga"
               target="_blank"
               rel="noopener noreferrer"
               className="group flex flex-col items-center text-center bg-background/10 border border-background/15 rounded-2xl p-6 hover:bg-background/15 transition-colors duration-300"
