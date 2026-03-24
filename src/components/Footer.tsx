@@ -7,7 +7,7 @@ const Footer = () => {
             Parana<span className="text-primary">flow</span> Yoga
           </a>
           <p className="text-sm text-background/50">
-            © {new Date().getFullYear()} Paranaflow Yoga by Krishan Goyat. All rights reserved.
+            © {new Date().getFullYear()} ParanaflowYoga by Krishan Goyat. All rights reserved.
           </p>
         </div>
       </div>

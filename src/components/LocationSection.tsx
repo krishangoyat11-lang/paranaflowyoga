@@ -30,7 +30,7 @@ const LocationSection = () => {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Paranaflow Yoga Location - Tata Primanti, Sector 72, Gurgaon"
+                title="ParanaflowYoga Location - Tata Primanti, Sector 72, Gurgaon"
               />
             </div>
 
