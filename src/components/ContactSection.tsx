@@ -38,7 +38,7 @@ const ContactSection = () => {
             </a>
 
             <a
-              href="mailto:paranayogaflow@gmail.com"
+              href="mailto:Paranaflowyoga@gmail.com"
               className="group flex flex-col items-center text-center bg-background/10 border border-background/15 rounded-2xl p-6 hover:bg-background/15 transition-colors duration-300"
             >
               <div className="w-14 h-14 rounded-full bg-background/15 flex items-center justify-center mb-4 group-hover:bg-primary transition-colors duration-300">
