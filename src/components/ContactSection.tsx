@@ -45,7 +45,7 @@ const ContactSection = () => {
                 <Mail className="w-6 h-6 text-background" />
               </div>
               <p className="font-medium text-background mb-1">Email</p>
-              <p className="text-sm text-background/60 break-all"><p className="text-sm text-background/60 break-all">Paranaflowyoga@gmail.com</p>
+              <p className="text-sm text-background/60 break-all">Paranaflowyoga@gmail.com</p>
             </a>
 
             <div className="flex flex-col items-center text-center bg-background/10 border border-background/15 rounded-2xl p-6">
