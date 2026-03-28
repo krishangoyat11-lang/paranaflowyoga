@@ -38,14 +38,14 @@ const ContactSection = () => {
             </a>
 
             <a
-              href="mailto:paranayogaflow@gmail.com"
+              href="mailto:Paranaflowyoga@gmail.com"
               className="group flex flex-col items-center text-center bg-background/10 border border-background/15 rounded-2xl p-6 hover:bg-background/15 transition-colors duration-300"
             >
               <div className="w-14 h-14 rounded-full bg-background/15 flex items-center justify-center mb-4 group-hover:bg-primary transition-colors duration-300">
                 <Mail className="w-6 h-6 text-background" />
               </div>
               <p className="font-medium text-background mb-1">Email</p>
-              <p className="text-sm text-background/60 break-all">paranayogaflow@gmail.com</p>
+              <p className="text-sm text-background/60 break-all">Paranaflowyoga@gmail.com</p>
             </a>
 
             <div className="flex flex-col items-center text-center bg-background/10 border border-background/15 rounded-2xl p-6">
@@ -57,7 +57,7 @@ const ContactSection = () => {
             </div>
 
             <a
-              href="https://instagram.com/Paranaflowyoga"
+              href="https://www.instagram.com/paranaflowyoga?igsh=MWs3djRxNmlrbno3NQ%3D%3D&utm_source=qr"
               target="_blank"
               rel="noopener noreferrer"
               className="group flex flex-col items-center text-center bg-background/10 border border-background/15 rounded-2xl p-6 hover:bg-background/15 transition-colors duration-300"
