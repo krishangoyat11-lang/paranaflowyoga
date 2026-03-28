@@ -204,7 +204,7 @@ const ReviewsSection = () => {
               {showForm ? "Cancel" : "Write a Review"}
             </Button>
             <a
-              href="https://search.google.com/local/writereview?placeid=paranaflowyoga"
+              href="https://g.page/r/CVE_a_c45a4WEAE/review"
               target="_blank"
               rel="noopener noreferrer"
             >
