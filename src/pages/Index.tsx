@@ -5,6 +5,7 @@ import ServicesSection from "@/components/ServicesSection";
 import WhyChooseSection from "@/components/WhyChooseSection";
 import ReviewsSection from "@/components/ReviewsSection";
 
+import QuerySection from "@/components/QuerySection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
