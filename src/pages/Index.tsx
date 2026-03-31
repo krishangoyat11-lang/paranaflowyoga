@@ -4,6 +4,7 @@ import AboutSection from "@/components/AboutSection";
 import ServicesSection from "@/components/ServicesSection";
 import WhyChooseSection from "@/components/WhyChooseSection";
 import ReviewsSection from "@/components/ReviewsSection";
+import PricingSection from "@/components/PricingSection";
 
 import QuerySection from "@/components/QuerySection";
 import ContactSection from "@/components/ContactSection";
