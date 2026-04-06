@@ -200,7 +200,69 @@ const YogaClassesGurgaon = () => {
         </div>
       </section>
 
-      {/* CTA */}
+      {/* Photo Gallery */}
+      <section className="py-20 lg:py-28 bg-background">
+        <div className="container">
+          <div className="text-center max-w-xl mx-auto mb-14">
+            <p className="text-sm font-medium tracking-[0.15em] uppercase text-muted-foreground mb-3">
+              Gallery
+            </p>
+            <h2 className="font-heading text-3xl lg:text-4xl font-semibold leading-[1.1] text-foreground text-balance">
+              Glimpses from Our Yoga Sessions
+            </h2>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
+            {galleryPhotos.map((photo, i) => (
+              <button
+                key={i}
+                onClick={() => setLightboxIndex(i)}
+                className="relative aspect-[4/3] rounded-xl overflow-hidden group cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary"
+              >
+                <img
+                  src={photo.src}
+                  alt={photo.alt}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/20 transition-colors duration-300" />
+              </button>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Lightbox */}
+      {lightboxIndex !== null && (
+        <div className="fixed inset-0 z-[100] bg-foreground/90 flex items-center justify-center p-4">
+          <button
+            onClick={() => setLightboxIndex(null)}
+            className="absolute top-4 right-4 text-background hover:text-background/80 z-10"
+            aria-label="Close"
+          >
+            <X className="w-8 h-8" />
+          </button>
+          <button
+            onClick={() => setLightboxIndex((lightboxIndex - 1 + galleryPhotos.length) % galleryPhotos.length)}
+            className="absolute left-2 md:left-6 text-background hover:text-background/80 z-10"
+            aria-label="Previous"
+          >
+            <ChevronLeft className="w-8 h-8" />
+          </button>
+          <button
+            onClick={() => setLightboxIndex((lightboxIndex + 1) % galleryPhotos.length)}
+            className="absolute right-2 md:right-6 text-background hover:text-background/80 z-10"
+            aria-label="Next"
+          >
+            <ChevronRight className="w-8 h-8" />
+          </button>
+          <img
+            src={galleryPhotos[lightboxIndex].src}
+            alt={galleryPhotos[lightboxIndex].alt}
+            className="max-w-full max-h-[85vh] object-contain rounded-lg"
+          />
+        </div>
+      )}
+
       <section className="py-20 lg:py-28 bg-primary text-primary-foreground">
         <div className="container text-center max-w-2xl mx-auto">
           <h2 className="font-heading text-3xl lg:text-4xl font-semibold leading-[1.1] mb-4 text-primary-foreground text-balance">
