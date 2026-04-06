@@ -65,6 +65,8 @@ const benefits = [
 ];
 
 const YogaClassesGurgaon = () => {
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+
   useEffect(() => {
     document.title =
       "Yoga Classes in Gurgaon | Home Yoga, Personal & Corporate Sessions | Paranaflow Yoga";
@@ -76,6 +78,15 @@ const YogaClassesGurgaon = () => {
       );
     }
   }, []);
+
+  useEffect(() => {
+    if (lightboxIndex !== null) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => { document.body.style.overflow = ""; };
+  }, [lightboxIndex]);
 
   return (
     <div className="min-h-screen">
