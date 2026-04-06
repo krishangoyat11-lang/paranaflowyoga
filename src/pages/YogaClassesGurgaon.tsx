@@ -1,10 +1,26 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import { Home, Users, Heart, Dumbbell, Wind, Phone, ArrowRight } from "lucide-react";
+import { Home, Users, Heart, Dumbbell, Wind, Phone, ArrowRight, X, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+
+import yoga1 from "@/assets/gallery/yoga-1.jpeg";
+import yoga2 from "@/assets/gallery/yoga-2.jpeg";
+import yoga3 from "@/assets/gallery/yoga-3.jpeg";
+import yoga4 from "@/assets/gallery/yoga-4.jpeg";
+import yoga5 from "@/assets/gallery/yoga-5.jpeg";
+import yoga6 from "@/assets/gallery/yoga-6.jpeg";
+
+const galleryPhotos = [
+  { src: yoga1, alt: "Krishan Goyat performing advanced yoga pose" },
+  { src: yoga2, alt: "Group yoga class in Gurgaon" },
+  { src: yoga3, alt: "Pranayama breathing exercise" },
+  { src: yoga4, alt: "Student practicing pranayama" },
+  { src: yoga5, alt: "Group yoga stretching session" },
+  { src: yoga6, alt: "Relaxation yoga class" },
+];
 
 const services = [
   {
