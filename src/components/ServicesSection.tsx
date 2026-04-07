@@ -33,17 +33,20 @@ const ServicesSection = () => {
   const { ref, isVisible } = useScrollReveal();
 
   return (
-    <section id="services" className="py-24 lg:py-32 bg-primary text-primary-foreground relative overflow-hidden" ref={ref}>
-      {/* Decorative circles */}
-      <div className="absolute top-12 right-12 w-64 h-64 rounded-full border border-primary-foreground/10" />
-      <div className="absolute -bottom-20 -left-20 w-80 h-80 rounded-full border border-primary-foreground/10" />
+    <section id="services" className="py-24 lg:py-32 bg-dark-surface-light relative overflow-hidden" ref={ref}>
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
+      <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
+      <div className="absolute top-12 right-12 w-64 h-64 rounded-full border border-gold/10" />
+      <div className="absolute -bottom-20 -left-20 w-80 h-80 rounded-full border border-gold/10" />
 
       <div className="container relative z-10">
         <div className={`text-center max-w-xl mx-auto mb-16 ${isVisible ? "animate-fade-up" : "opacity-0"}`}>
-          <p className="text-sm font-medium tracking-[0.15em] uppercase text-primary-foreground/70 mb-3">
-            Services
-          </p>
-          <h2 className="font-heading text-4xl lg:text-5xl font-semibold leading-[1.1] text-primary-foreground text-balance">
+          <div className="flex items-center justify-center gap-4 mb-4">
+            <div className="w-12 h-px bg-gold/50" />
+            <p className="text-sm font-medium tracking-[0.25em] uppercase text-gold">Services</p>
+            <div className="w-12 h-px bg-gold/50" />
+          </div>
+          <h2 className="font-heading text-4xl lg:text-5xl font-semibold leading-[1.1] text-cream text-balance">
             What I Offer
           </h2>
         </div>
@@ -52,16 +55,16 @@ const ServicesSection = () => {
           {services.map((service, i) => (
             <div
               key={service.title}
-              className={`group bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/15 rounded-2xl p-8 hover:bg-primary-foreground/15 transition-colors duration-300 ${
-                isVisible ? `animate-fade-up` : "opacity-0"
+              className={`group bg-dark-surface border border-gold/10 rounded-2xl p-8 hover:border-gold/30 transition-all duration-500 ${
+                isVisible ? "animate-fade-up" : "opacity-0"
               }`}
               style={{ animationDelay: isVisible ? `${(i + 1) * 100}ms` : undefined }}
             >
-              <div className="w-12 h-12 rounded-xl bg-primary-foreground/20 flex items-center justify-center mb-5 group-hover:bg-primary-foreground/30 transition-colors duration-300">
-                <service.icon className="w-6 h-6 text-primary-foreground" />
+              <div className="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center mb-5 group-hover:bg-gold/20 transition-colors duration-300">
+                <service.icon className="w-6 h-6 text-gold" />
               </div>
-              <h3 className="font-heading text-xl font-semibold mb-2 text-primary-foreground">{service.title}</h3>
-              <p className="text-primary-foreground/75 text-sm leading-relaxed text-pretty">{service.description}</p>
+              <h3 className="font-heading text-xl font-semibold mb-2 text-cream">{service.title}</h3>
+              <p className="text-cream/60 text-sm leading-relaxed text-pretty">{service.description}</p>
             </div>
           ))}
         </div>

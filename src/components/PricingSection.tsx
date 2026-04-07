@@ -35,16 +35,21 @@ const PricingSection = () => {
   const { ref, isVisible } = useScrollReveal();
 
   return (
-    <section id="pricing" className="py-24 lg:py-32 bg-background" ref={ref}>
-      <div className="container">
+    <section id="pricing" className="py-24 lg:py-32 bg-dark-surface relative overflow-hidden" ref={ref}>
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
+      <div className="absolute -bottom-32 -right-32 w-72 h-72 rounded-full bg-gold/5" />
+
+      <div className="container relative z-10">
         <div className={`text-center max-w-xl mx-auto mb-12 ${isVisible ? "animate-fade-up" : "opacity-0"}`}>
-          <p className="text-sm font-medium tracking-[0.15em] uppercase text-primary mb-3">
-            Pricing
-          </p>
-          <h2 className="font-heading text-4xl lg:text-5xl font-semibold leading-[1.1] mb-4 text-balance">
+          <div className="flex items-center justify-center gap-4 mb-4">
+            <div className="w-12 h-px bg-gold/50" />
+            <p className="text-sm font-medium tracking-[0.25em] uppercase text-gold">Pricing</p>
+            <div className="w-12 h-px bg-gold/50" />
+          </div>
+          <h2 className="font-heading text-4xl lg:text-5xl font-semibold leading-[1.1] mb-4 text-cream text-balance">
             Individual Yoga Packages
           </h2>
-          <p className="text-muted-foreground text-lg text-pretty">
+          <p className="text-cream/60 text-lg text-pretty">
             Flexible plans for every schedule. All sectors in Gurgaon.
           </p>
         </div>
@@ -52,25 +57,25 @@ const PricingSection = () => {
         <div className={`max-w-4xl mx-auto overflow-x-auto ${isVisible ? "animate-fade-up delay-200" : "opacity-0"}`}>
           <table className="w-full border-collapse min-w-[600px]">
             <thead>
-              <tr className="bg-primary text-primary-foreground">
-                <th className="py-3 px-4 text-sm font-semibold text-left rounded-tl-xl">Type</th>
-                <th className="py-3 px-4 text-sm font-semibold text-left">Morning</th>
-                <th className="py-3 px-4 text-sm font-semibold text-left">Evening</th>
-                <th className="py-3 px-4 text-sm font-semibold text-center">Days</th>
-                <th className="py-3 px-4 text-sm font-semibold text-center rounded-tr-xl">Packages</th>
+              <tr className="bg-gold/10 border border-gold/20">
+                <th className="py-3 px-4 text-sm font-semibold text-left text-gold rounded-tl-xl">Type</th>
+                <th className="py-3 px-4 text-sm font-semibold text-left text-gold">Morning</th>
+                <th className="py-3 px-4 text-sm font-semibold text-left text-gold">Evening</th>
+                <th className="py-3 px-4 text-sm font-semibold text-center text-gold">Days</th>
+                <th className="py-3 px-4 text-sm font-semibold text-center text-gold rounded-tr-xl">Packages</th>
               </tr>
             </thead>
             <tbody>
               {packages.map((pkg, i) => (
                 <tr
                   key={i}
-                  className={`border-b border-border ${i % 2 === 0 ? "bg-muted/30" : "bg-background"} hover:bg-muted/50 transition-colors`}
+                  className={`border-b border-gold/10 ${i % 2 === 0 ? "bg-dark-surface-light/50" : "bg-dark-surface"} hover:bg-gold/5 transition-colors`}
                 >
-                  <td className="py-4 px-4 text-sm font-medium text-foreground">{pkg.type}</td>
-                  <td className="py-4 px-4 text-sm text-muted-foreground">{pkg.morning}</td>
-                  <td className="py-4 px-4 text-sm text-muted-foreground">{pkg.evening}</td>
-                  <td className="py-4 px-4 text-sm text-muted-foreground text-center">{pkg.days}</td>
-                  <td className="py-4 px-4 text-sm font-semibold text-primary text-center">{pkg.price}</td>
+                  <td className="py-4 px-4 text-sm font-medium text-cream">{pkg.type}</td>
+                  <td className="py-4 px-4 text-sm text-cream/60">{pkg.morning}</td>
+                  <td className="py-4 px-4 text-sm text-cream/60">{pkg.evening}</td>
+                  <td className="py-4 px-4 text-sm text-cream/60 text-center">{pkg.days}</td>
+                  <td className="py-4 px-4 text-sm font-semibold text-gold text-center">{pkg.price}</td>
                 </tr>
               ))}
             </tbody>
