@@ -196,6 +196,7 @@ const LandingPageTemplate = ({
               { to: "/corporate-yoga-gurgaon", label: "Corporate Yoga" },
               { to: "/morning-yoga-gurgaon", label: "Morning Yoga Classes" },
               { to: "/yoga-classes-gurgaon", label: "Yoga Classes in Gurgaon" },
+              { to: "/yoga-instructor-at-home-gurgaon", label: "Yoga Instructor at Home" },
             ].map((link) => (
               <Link
                 key={link.to}
