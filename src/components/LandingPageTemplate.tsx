@@ -3,13 +3,18 @@ import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import { Phone, ArrowRight, CheckCircle } from "lucide-react";
+import { Phone, CheckCircle } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
 interface Service {
   icon: LucideIcon;
   title: string;
   description: string;
+}
+
+interface FAQ {
+  question: string;
+  answer: string;
 }
 
 interface LandingPageProps {
@@ -26,6 +31,8 @@ interface LandingPageProps {
   ctaHeading: string;
   ctaDescription: string;
   jsonLd?: object;
+  faqs?: FAQ[];
+  areasServed?: string;
 }
 
 const LandingPageTemplate = ({
@@ -42,25 +49,41 @@ const LandingPageTemplate = ({
   ctaHeading,
   ctaDescription,
   jsonLd,
+  faqs,
+  areasServed,
 }: LandingPageProps) => {
   useEffect(() => {
     document.title = pageTitle;
     const meta = document.querySelector('meta[name="description"]');
     if (meta) meta.setAttribute("content", metaDescription);
 
-    // JSON-LD
-    if (jsonLd) {
-      let script = document.getElementById("landing-jsonld") as HTMLScriptElement | null;
+    // Combined JSON-LD: Service + FAQPage
+    const ldArr: object[] = [];
+    if (jsonLd) ldArr.push(jsonLd);
+    if (faqs && faqs.length > 0) {
+      ldArr.push({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: faqs.map((f) => ({
+          "@type": "Question",
+          name: f.question,
+          acceptedAnswer: { "@type": "Answer", text: f.answer },
+        })),
+      });
+    }
+
+    let script = document.getElementById("landing-jsonld") as HTMLScriptElement | null;
+    if (ldArr.length > 0) {
       if (!script) {
         script = document.createElement("script");
         script.id = "landing-jsonld";
         script.type = "application/ld+json";
         document.head.appendChild(script);
       }
-      script.textContent = JSON.stringify(jsonLd);
-      return () => { script?.remove(); };
+      script.textContent = JSON.stringify(ldArr.length === 1 ? ldArr[0] : ldArr);
     }
-  }, [pageTitle, metaDescription, jsonLd]);
+    return () => { script?.remove(); };
+  }, [pageTitle, metaDescription, jsonLd, faqs]);
 
   return (
     <div className="min-h-screen">
@@ -180,6 +203,56 @@ const LandingPageTemplate = ({
           </div>
         </div>
       </section>
+
+      {/* Areas Served */}
+      {areasServed && (
+        <section className="py-16 bg-dark-surface-light relative">
+          <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
+          <div className="container text-center max-w-3xl mx-auto">
+            <h3 className="font-heading text-xl font-semibold text-cream mb-4">
+              Areas We Serve in Gurgaon
+            </h3>
+            <p className="text-cream/50 text-sm leading-relaxed">
+              {areasServed}
+            </p>
+          </div>
+        </section>
+      )}
+
+      {/* FAQ */}
+      {faqs && faqs.length > 0 && (
+        <section className="py-20 lg:py-28 bg-dark-surface relative">
+          <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
+          <div className="container max-w-3xl mx-auto">
+            <div className="text-center mb-12">
+              <div className="flex items-center justify-center gap-4 mb-4">
+                <div className="w-12 h-px bg-gold/50" />
+                <p className="text-sm font-medium tracking-[0.2em] uppercase text-gold">FAQ</p>
+                <div className="w-12 h-px bg-gold/50" />
+              </div>
+              <h2 className="font-heading text-3xl lg:text-4xl font-semibold leading-[1.1] text-cream">
+                Frequently Asked Questions
+              </h2>
+            </div>
+            <div className="space-y-4">
+              {faqs.map((faq, i) => (
+                <details
+                  key={i}
+                  className="group bg-dark-surface-light border border-gold/10 rounded-xl overflow-hidden"
+                >
+                  <summary className="cursor-pointer p-5 text-cream font-medium flex items-center justify-between hover:text-gold transition-colors">
+                    {faq.question}
+                    <span className="text-gold ml-4 group-open:rotate-45 transition-transform text-xl">+</span>
+                  </summary>
+                  <div className="px-5 pb-5 text-cream/60 text-sm leading-relaxed">
+                    {faq.answer}
+                  </div>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Internal Links */}
       <section className="py-16 bg-dark-surface-light relative">
