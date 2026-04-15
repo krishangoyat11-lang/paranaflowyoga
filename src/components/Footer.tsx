@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
 
 const footerLinks = [
-  { to: "/yoga-classes-gurgaon", label: "Yoga Classes" },
-  { to: "/home-yoga-gurgaon", label: "Home Yoga" },
+  { to: "/yoga-classes-gurgaon", label: "Yoga Classes in Gurgaon" },
+  { to: "/home-yoga-gurgaon", label: "Home Yoga in Gurgaon" },
   { to: "/weight-loss-yoga-gurgaon", label: "Weight Loss Yoga" },
-  { to: "/personal-yoga-trainer-gurgaon", label: "Personal Trainer" },
+  { to: "/personal-yoga-trainer-gurgaon", label: "Personal Yoga Trainer" },
   { to: "/corporate-yoga-gurgaon", label: "Corporate Yoga" },
-  { to: "/morning-yoga-gurgaon", label: "Morning Yoga" },
+  { to: "/morning-yoga-gurgaon", label: "Morning Yoga Classes" },
+  { to: "/yoga-instructor-at-home-gurgaon", label: "Yoga Instructor at Home" },
 ];
 
 const Footer = () => {
