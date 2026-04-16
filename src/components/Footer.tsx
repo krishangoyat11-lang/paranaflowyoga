@@ -8,6 +8,7 @@ const footerLinks = [
   { to: "/corporate-yoga-gurgaon", label: "Corporate Yoga" },
   { to: "/morning-yoga-gurgaon", label: "Morning Yoga Classes" },
   { to: "/yoga-instructor-at-home-gurgaon", label: "Yoga Instructor at Home" },
+  { to: "/blog", label: "Blog" },
 ];
 
 const Footer = () => {

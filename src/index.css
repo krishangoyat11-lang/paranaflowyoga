@@ -165,3 +165,23 @@
 .delay-400 { animation-delay: 400ms; }
 .delay-500 { animation-delay: 500ms; }
 .delay-600 { animation-delay: 600ms; }
+
+/* Blog article prose */
+.prose-custom h2 {
+  @apply font-heading text-2xl font-semibold text-cream mt-10 mb-4;
+}
+.prose-custom h3 {
+  @apply font-heading text-xl font-semibold text-gold mt-8 mb-3;
+}
+.prose-custom p {
+  @apply text-cream/70 leading-relaxed mb-4;
+}
+.prose-custom ul {
+  @apply text-cream/70 leading-relaxed mb-6 ml-6 list-disc space-y-2;
+}
+.prose-custom strong {
+  @apply text-cream font-semibold;
+}
+.prose-custom em {
+  @apply text-gold/80 italic;
+}
