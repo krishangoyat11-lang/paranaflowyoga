@@ -12,6 +12,8 @@ import PersonalYogaTrainerGurgaon from "./pages/PersonalYogaTrainerGurgaon.tsx";
 import CorporateYogaGurgaon from "./pages/CorporateYogaGurgaon.tsx";
 import MorningYogaGurgaon from "./pages/MorningYogaGurgaon.tsx";
 import YogaInstructorAtHomeGurgaon from "./pages/YogaInstructorAtHomeGurgaon.tsx";
+import Blog from "./pages/Blog.tsx";
+import BlogBenefitsOfPranayama from "./pages/BlogBenefitsOfPranayama.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -32,6 +34,8 @@ const App = () => (
           <Route path="/corporate-yoga-gurgaon" element={<CorporateYogaGurgaon />} />
           <Route path="/morning-yoga-gurgaon" element={<MorningYogaGurgaon />} />
           <Route path="/yoga-instructor-at-home-gurgaon" element={<YogaInstructorAtHomeGurgaon />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/benefits-of-pranayama" element={<BlogBenefitsOfPranayama />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
