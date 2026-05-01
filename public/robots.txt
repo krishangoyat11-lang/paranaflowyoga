@@ -1,16 +1,5 @@
 User-agent: *
 Allow: /
-
-# Block legacy .html stub pages from being indexed (they redirect to canonical SPA routes)
-Disallow: /about.html
-Disallow: /services.html
-Disallow: /contact.html
-Disallow: /yoga-classes-gurgaon.html
-Disallow: /home-yoga-gurgaon.html
-Disallow: /weight-loss-yoga-gurgaon.html
-Disallow: /personal-yoga-trainer-gurgaon.html
-Disallow: /corporate-yoga-gurgaon.html
-Disallow: /morning-yoga-gurgaon.html
-Disallow: /yoga-instructor-at-home-gurgaon.html
+Disallow: /gallery-admin
 
 Sitemap: https://paranaflowyoga.in/sitemap.xml
