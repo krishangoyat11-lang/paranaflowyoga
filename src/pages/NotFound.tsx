@@ -1,10 +1,17 @@
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import { setPageSeo } from "@/lib/seo";
 
 const NotFound = () => {
   const location = useLocation();
 
   useEffect(() => {
+    setPageSeo({
+      title: "Page Not Found | ParanaflowYoga",
+      description: "This ParanaflowYoga page was not found. Visit the homepage for yoga classes in Gurgaon and NCR.",
+      canonicalPath: "/",
+      robots: "noindex, follow",
+    });
     console.error("404 Error: User attempted to access non-existent route:", location.pathname);
   }, [location.pathname]);
 
