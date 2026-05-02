@@ -44,6 +44,8 @@ const App = () => (
           <Route path="/yoga-instructor-at-home-gurgaon" element={<YogaInstructorAtHomeGurgaon />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/benefits-of-pranayama" element={<BlogBenefitsOfPranayama />} />
+          <Route path="/:slug.html" element={<LegacyHtmlRedirect />} />
+          <Route path="/blog/:slug.html" element={<LegacyBlogHtmlRedirect />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
@@ -51,5 +53,15 @@ const App = () => (
     </TooltipProvider>
   </QueryClientProvider>
 );
+
+const LegacyHtmlRedirect = () => {
+  const slug = window.location.pathname.replace(/^\//, "").replace(/\.html$/, "");
+  return <Navigate to={`/${slug}`} replace />;
+};
+
+const LegacyBlogHtmlRedirect = () => {
+  const slug = window.location.pathname.replace(/^\/blog\//, "").replace(/\.html$/, "");
+  return <Navigate to={`/blog/${slug}`} replace />;
+};
 
 export default App;
