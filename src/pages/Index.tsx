@@ -11,6 +11,7 @@ import QuerySection from "@/components/QuerySection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import { setPageSeo } from "@/lib/seo";
 
 const homepageJsonLd = [
   {
@@ -77,9 +78,12 @@ const homepageJsonLd = [
 
 const Index = () => {
   useEffect(() => {
-    document.title = "Best Yoga Teacher in Gurgaon | Home Yoga, Personal Training & Corporate Yoga | ParanaflowYoga";
-    const meta = document.querySelector('meta[name="description"]');
-    if (meta) meta.setAttribute("content", "Looking for the best yoga teacher in Gurgaon? Krishan Goyat — National Yoga Champion with 17+ years experience — offers home yoga, personal training, corporate yoga, weight loss yoga & morning yoga classes in Gurgaon & NCR. Book now!");
+    setPageSeo({
+      title: "Best Yoga Teacher in Gurgaon | Home Yoga & Personal Training",
+      description:
+        "Looking for the best yoga teacher in Gurgaon? Krishan Goyat offers home yoga, personal training, corporate yoga, weight loss yoga and morning yoga classes.",
+      canonicalPath: "/",
+    });
 
     let script = document.getElementById("homepage-jsonld") as HTMLScriptElement | null;
     if (!script) {

@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { Phone, CheckCircle } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
+import { setPageSeo } from "@/lib/seo";
 
 interface Service {
   icon: LucideIcon;
@@ -53,9 +54,11 @@ const LandingPageTemplate = ({
   areasServed,
 }: LandingPageProps) => {
   useEffect(() => {
-    document.title = pageTitle;
-    const meta = document.querySelector('meta[name="description"]');
-    if (meta) meta.setAttribute("content", metaDescription);
+    setPageSeo({
+      title: pageTitle,
+      description: metaDescription,
+      canonicalPath: window.location.pathname,
+    });
 
     // Combined JSON-LD: Service + FAQPage
     const ldArr: object[] = [];

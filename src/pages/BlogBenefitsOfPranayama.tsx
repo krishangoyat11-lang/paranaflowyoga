@@ -4,17 +4,17 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { Calendar, ArrowLeft, Phone } from "lucide-react";
+import { setPageSeo } from "@/lib/seo";
 
 const BlogBenefitsOfPranayama = () => {
   useEffect(() => {
-    document.title =
-      "Benefits of Pranayama: Breathing Exercises for Health | ParanaflowYoga";
-    const meta = document.querySelector('meta[name="description"]');
-    if (meta)
-      meta.setAttribute(
-        "content",
-        "Explore the top benefits of Pranayama — stress relief, better sleep, improved lung capacity, mental clarity. Expert guide by Krishan Goyat, Gurgaon yoga instructor."
-      );
+    setPageSeo({
+      title: "Benefits of Pranayama | ParanaflowYoga Gurgaon",
+      description:
+        "Explore the top benefits of Pranayama: stress relief, better sleep, improved lung capacity and mental clarity. Expert guide by Krishan Goyat.",
+      canonicalPath: "/blog/benefits-of-pranayama",
+      type: "article",
+    });
 
     const jsonLd = {
       "@context": "https://schema.org",

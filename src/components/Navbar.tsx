@@ -2,13 +2,13 @@ import { useState, useEffect } from "react";
 import { Phone } from "lucide-react";
 
 const navLinks = [
-  { label: "About", href: "#about" },
-  { label: "Services", href: "#services" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "Gallery", href: "#gallery" },
-  { label: "Reviews", href: "#reviews" },
+  { label: "About", href: "/about" },
+  { label: "Services", href: "/services" },
+  { label: "Pricing", href: "/#pricing" },
+  { label: "Gallery", href: "/#gallery" },
+  { label: "Reviews", href: "/#reviews" },
   { label: "Blog", href: "/blog" },
-  { label: "Contact", href: "#contact" },
+  { label: "Contact", href: "/contact" },
 ];
 
 const Navbar = () => {
@@ -30,7 +30,7 @@ const Navbar = () => {
       }`}
     >
       <div className="container flex items-center justify-between">
-        <a href="#" className="font-heading text-2xl font-semibold tracking-tight text-cream">
+        <a href="/" className="font-heading text-2xl font-semibold tracking-tight text-cream">
           Parana<span className="text-gold">flow</span> Yoga
         </a>
 

@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { Calendar, ArrowRight } from "lucide-react";
+import { setPageSeo } from "@/lib/seo";
 
 const blogPosts = [
   {
@@ -19,13 +20,12 @@ const blogPosts = [
 
 const Blog = () => {
   useEffect(() => {
-    document.title = "Yoga Blog — Tips, Benefits & Wellness | ParanaflowYoga Gurgaon";
-    const meta = document.querySelector('meta[name="description"]');
-    if (meta)
-      meta.setAttribute(
-        "content",
-        "Read expert yoga articles by Krishan Goyat — pranayama benefits, weight loss tips, morning routines & more. Professional yoga insights from Gurgaon's top instructor."
-      );
+    setPageSeo({
+      title: "Yoga Blog Gurgaon | ParanaflowYoga",
+      description:
+        "Read expert yoga articles by Krishan Goyat on pranayama, home yoga, weight loss, wellness and yoga practice in Gurgaon.",
+      canonicalPath: "/blog",
+    });
   }, []);
 
   return (
