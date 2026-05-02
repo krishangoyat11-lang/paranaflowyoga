@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 
 const footerLinks = [
+  { to: "/about", label: "About Krishan Goyat" },
+  { to: "/services", label: "Yoga Services" },
   { to: "/yoga-classes-gurgaon", label: "Yoga Classes in Gurgaon" },
   { to: "/home-yoga-gurgaon", label: "Home Yoga in Gurgaon" },
   { to: "/weight-loss-yoga-gurgaon", label: "Weight Loss Yoga" },
@@ -17,9 +19,9 @@ const Footer = () => {
       <div className="container">
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 mb-10">
           <div>
-            <a href="#" className="font-heading text-xl font-semibold text-cream mb-3 block">
+            <Link to="/" className="font-heading text-xl font-semibold text-cream mb-3 block">
               Parana<span className="text-gold">flow</span> Yoga
-            </a>
+            </Link>
             <p className="text-cream/40 text-sm leading-relaxed">
               Professional yoga training by Krishan Goyat — National Yoga Champion with 17+ years of experience. Serving Gurgaon & NCR.
             </p>
