@@ -3,9 +3,9 @@ import { Phone } from "lucide-react";
 
 const navLinks = [
   { label: "About", href: "/about" },
+  { label: "Online Yoga", href: "/#online-yoga" },
   { label: "Services", href: "/services" },
   { label: "Pricing", href: "/#pricing" },
-  { label: "Gallery", href: "/#gallery" },
   { label: "Reviews", href: "/#reviews" },
   { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/contact" },

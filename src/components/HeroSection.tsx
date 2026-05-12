@@ -29,9 +29,16 @@ const HeroSection = () => {
             <br />
             <span className="text-gold">Live with Balance</span>
           </h1>
-          <p className="animate-fade-up delay-200 text-lg sm:text-xl text-cream/75 max-w-lg mb-10 text-pretty leading-relaxed">
-            Transform your body, calm your mind, and elevate your life with personalized yoga at your doorstep in Gurgaon & NCR.
+          <p className="animate-fade-up delay-200 text-lg sm:text-xl text-cream/75 max-w-lg mb-6 text-pretty leading-relaxed">
+            Transform your body, calm your mind, and elevate your life with personalized yoga at your doorstep in Gurgaon & NCR — or live online via Zoom & Google Meet, anywhere in the world.
           </p>
+          <a
+            href="#online-yoga"
+            className="animate-fade-up delay-200 inline-flex items-center gap-2 mb-10 px-4 py-2 rounded-full bg-gold/15 border border-gold/40 text-gold text-sm font-semibold hover:bg-gold/25 transition-colors"
+          >
+            <span className="w-2 h-2 rounded-full bg-gold animate-pulse" />
+            New: Online Yoga Worldwide via Zoom & Google Meet
+          </a>
           <div className="animate-fade-up delay-300 flex flex-wrap gap-4">
             <a
               href="tel:+918950622342"
