@@ -1,7 +1,13 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
-import { Home, Users, Heart, Dumbbell, Wind } from "lucide-react";
+import { Home, Users, Heart, Dumbbell, Wind, Globe } from "lucide-react";
 
 const services = [
+  {
+    icon: Globe,
+    title: "Online Yoga (Worldwide)",
+    description: "Live 1-on-1 yoga via Zoom or Google Meet — join from anywhere in the world. Most recommended.",
+    featured: true,
+  },
   {
     icon: Home,
     title: "Personal Home Yoga",
