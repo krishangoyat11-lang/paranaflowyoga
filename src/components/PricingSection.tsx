@@ -29,6 +29,13 @@ const packages = [
     days: "Sat and Sun",
     price: "₹5,000",
   },
+  {
+    type: "Online Yoga (Worldwide) ★",
+    morning: "Zoom / Google Meet — Any time zone",
+    evening: "Zoom / Google Meet — Any time zone",
+    days: "Mon to Sat",
+    price: "From $80 / mo",
+  },
 ];
 
 const PricingSection = () => {
