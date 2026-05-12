@@ -61,11 +61,18 @@ const ServicesSection = () => {
           {services.map((service, i) => (
             <div
               key={service.title}
-              className={`group bg-dark-surface border border-gold/10 rounded-2xl p-8 hover:border-gold/30 transition-all duration-500 ${
-                isVisible ? "animate-fade-up" : "opacity-0"
-              }`}
+              className={`group relative rounded-2xl p-8 transition-all duration-500 ${
+                service.featured
+                  ? "bg-gradient-to-br from-gold/15 via-gold/5 to-dark-surface border-2 border-gold/40 hover:border-gold/60 shadow-lg shadow-gold/5"
+                  : "bg-dark-surface border border-gold/10 hover:border-gold/30"
+              } ${isVisible ? "animate-fade-up" : "opacity-0"}`}
               style={{ animationDelay: isVisible ? `${(i + 1) * 100}ms` : undefined }}
             >
+              {service.featured && (
+                <span className="absolute -top-3 right-6 bg-gold text-dark-surface text-[10px] font-bold tracking-[0.18em] uppercase px-3 py-1 rounded-full">
+                  Recommended
+                </span>
+              )}
               <div className="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center mb-5 group-hover:bg-gold/20 transition-colors duration-300">
                 <service.icon className="w-6 h-6 text-gold" />
               </div>
